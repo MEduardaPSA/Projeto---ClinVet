@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinVet - Cadastro de Animais</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header id="header-content">
+        <img src="./assets/logo-clin-vet.svg" alt="Logo ClinVet" class="header-logo">
+        <img src="./assets/pegada-cachorro-500px.svg" alt="Imagem Pata de Cachorro" class="header-dogPaw">
+        
+        <nav class="navigation">
+            <ul class="menu-list">
+                <li class="list-item">
+                    <a href="" class="link-item">
+                        Cadastro
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main-container">
+        <div class="register-title">
+            <h1>
+                Cadastro de <span>Atendimento</span>
+            </h1>
+        </div>
+        <div class="register-form">
+            <form id="form">
+                <label for="tutorsName">Dados do Tutor</label>
+                <input type="text" name="tutorsName" id="tutorsName" placeholder="Digite o nome do tutor" class="input-form" required>
+
+                <label for="tutorsEmail"></label>
+                <input type="email" name="tutorsEmail" id="tutorsEmail" placeholder="Digite o e-mail do tutor" class="input-form" required>
+
+                <label for="tutorsPhone"></label>
+                <input type="tel" name="tutorsPhone" id="tutorsPhone" placeholder="Digite o telefone do tutor" class="input-form" required>
+
+                <label for="animalName">Dados do Animal</label>
+                <input type="text" name="animalName" id="animalName" placeholder="Digite o nome do animal" class="input-form" required>
+
+                <label for="animalAge"></label>
+                <input type="number" name="animalAge" id="animalAge" placeholder="Digite a idade do animal" class="input-form" maxlength="16" required>
+
+                <label for="animalKilo"></label>
+                <input type="text" name="animalKilo" id="animalKilo" placeholder="Digite o quilo do animal" class="input-form" required>
+
+                <label for="animalGender"></label>
+                <input type="text" name="animalGender" id="animalGender" placeholder="Digite o sexo do animal (Macho/Femêa)" class="input-form" required>
+
+                <label for="selectService"></label>
+                <select name="selectService" id="selectService" class="select-form" required>
+                    <option value="select" selected disabled>Selecione o Serviço desejado</option>
+                    <option value="exams">Exames</option>
+                    <option value="queries">Consultas</option>
+                    <option value="surgeries">Cirurgias</option>
+                    <option value="vaccination">Vacinação</option>
+                    <option value="electiveSurgeries">Cirurgias Eletivas</option>
+                    <option value="emergency">Emergência</option>
+                </select>
+
+                <label for="emergencyLevel">Qual o nível de emergência do atendimento? (0 à 10)</label>
+                <input type="range" name="emergencyLevel" id="emergencyLevel" minlength="0" maxlength="10" step="10" class="input-form" required>
+
+                <label for="submit"></label>
+                <input type="submit" value="Cadastrar" class="submit-form" id="submit-form" onclick="registerAnimal()">
+            </form>
+        </div>
+        <div class="registered-title">
+            <h1>Animais <span>Cadastrados</span></h1>
+        </div>
+        <div id="registered-animals">
+           <!-- Vai ser adicionado dinamicamente através do JAVASCRIPT -->
+        </div>
+    </main>
+    <script src="./js/script.js"></script>
+    <!-- Adicionando o Font Awesome -->
+    <script src="https://kit.fontawesome.com/d316cd7057.js" crossorigin="anonymous"></script>
+</body>
+</html>
